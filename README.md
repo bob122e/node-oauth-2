@@ -36,7 +36,7 @@ testing
 
 # Sections
 
-## [Hello World Server](/README/Hello World Server.md)
+## [Hello World Server](/README/1. Hello World Server.md)
 
-## [Home, Sign Up, Login, Profile](/README/Home Sign Up Login Profile.md)
+## [Home, Sign Up, Login, Profile](/README/2. Home Sign Up Login Profile.md)
 
