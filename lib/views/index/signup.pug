@@ -1,0 +1,26 @@
+doctype html
+html
+  head
+    title= title
+    link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css')
+  body
+    .container(class='col-md-4 col-md-offset-4' style='margin-top:60px')
+      p: a(href='/')  Home
+      .panel.panel-default
+        .panel-heading= title
+        .panel-body
+          form(method='POST')
+            .form-group
+                label Email
+                input.form-control(type='email', autofocus='', required='')
+            .form-group
+                label Password
+                input.form-control(type='password', required='')
+            .form-group
+                label Confirm Password
+                input.form-control(type='password', required='')
+            button.btn.btn-lg.btn-success.btn-block(type='submit') Sign Up
+            br
+            p Already have an account? 
+              a(href='/login') Login
+

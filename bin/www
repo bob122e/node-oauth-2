@@ -1,0 +1,10 @@
+#!/usr/bin/env node
+
+var app  = require('../lib/app.js');
+var http = require('http');
+
+var server = http.createServer(app);
+
+server.listen(8080);
+
+console.log('server listening...');
