@@ -4,18 +4,25 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon --watch lib --exec node -- bin/www",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "migrate": "NODE_ENV=development knex migrate:latest",
+    "start": "NODE_ENV=development nodemon --watch lib --exec node -- bin/www",
+    "test": "NODE_ENV=test mocha --recursive"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "async": "^2.1.4",
+    "bcrypt": "^1.0.2",
     "body-parser": "^1.16.0",
     "cookie-parser": "^1.4.3",
     "express": "^4.14.0",
+    "knex": "^0.12.6",
     "morgan": "^1.7.0",
-    "pug": "^2.0.0-beta6"
+    "pug": "^2.0.0-beta6",
+    "rods": "^1.2.3-beta",
+    "sqlite3": "^3.1.8",
+    "uuid": "^3.0.1"
   },
   "devDependencies": {
     "nodemon": "^1.11.0"

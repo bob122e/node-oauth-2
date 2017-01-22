@@ -12,13 +12,13 @@ html
           form(method='POST')
             .form-group
                 label Email
-                input.form-control(type='email', autofocus='', required='')
+                input.form-control(type='email', name='email' autofocus='', required='')
             .form-group
                 label Password
-                input.form-control(type='password', required='')
+                input.form-control(type='password', name='password' required='')
             .form-group
                 label Confirm Password
-                input.form-control(type='password', required='')
+                input.form-control(type='password', name='confirm' required='')
             button.btn.btn-lg.btn-success.btn-block(type='submit') Sign Up
             br
             p Already have an account? 
