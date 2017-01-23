@@ -9,14 +9,15 @@ nav.navbar.navbar-default.navbar-fixed-top
       a.navbar-brand(href='#') Node-OAuth 2
     #navbar.navbar-collapse.collapse
       ul.nav.navbar-nav
-        li.active
-        li
-          a(href='/about') About
-        li
-          a(href='/contact') Contact
+        if !user
+          li
+            a(href='/about') About
+          li
+            a(href='/contact') Contact
       ul.nav.navbar-nav.navbar-right
-        li
-          a(href='/login') Login
-        li
-          a(href='/signup') Sign Up
+        if user
+          li: a(href='/logout') Logout
+        else
+          li: a(href='/login') Login
+          li: a(href='/signup') Sign Up
 
