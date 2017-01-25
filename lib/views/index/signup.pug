@@ -1,3 +1,5 @@
+include ../shared/alert.pug
+
 doctype html
 html
   head
@@ -6,6 +8,7 @@ html
   body
     .container(class='col-md-4 col-md-offset-4' style='margin-top:60px')
       p: a(href='/')  Home
+      +alert()
       .panel.panel-default
         .panel-heading= title
         .panel-body

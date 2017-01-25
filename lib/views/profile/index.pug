@@ -3,12 +3,16 @@ extends ../layout.pug
 block content
   h1 Welcome
   hr
-  label Email
-  p= user.email
-  label First Name
-  p= user.first_name
-  label Last Name
-  p= user.last_name
-  label Birth Date
-  p= user.birthdate
+  +alert()
+  form(method='POST')
+    label Email
+    input.form-control(type='text', name='email', value=user.email)
+    label First Name
+    input.form-control(type='text', name='first_name', value=user.first_name)
+    label Last Name
+    input.form-control(type='text', name='last_name', value=user.last_name)
+    label Birth Date
+    input.form-control(type='date', name='birthdate', value=user.birthdate)
+    hr
+    button(class='btn btn-primary' type='submit') Update
 
