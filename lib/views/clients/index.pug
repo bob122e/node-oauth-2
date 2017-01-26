@@ -1,0 +1,26 @@
+extends ../layout.pug
+
+block content
+  h1= title
+  hr
+  +alert()
+  a.btn.btn-primary(href='/clients/new') New Client
+  br
+  table.table
+    thead
+      tr
+        th Name
+        th Client ID
+        th Scope
+        th Grants
+        th Redirect URIs
+    tbody
+    each c in clients
+      tr
+        td= c.name
+        td= c.client_id
+        td= c.scope
+        td= c.grants
+        td= c.redirect_uris
+    
+

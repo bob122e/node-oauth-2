@@ -1,0 +1,25 @@
+extends ../layout.pug
+
+block content
+  h1 New Client
+  hr
+  +alert()
+  form(method='POST')
+    label Name
+    input.form-control(type='text', name='name')
+    label Client ID
+    input.form-control(type='text', name='client_id', value=client_id readonly=true)
+    label Secret
+    input.form-control(type='text', name='secret', value=secret readonly=true)
+    label Scope
+    select.form-control(name='scope', multiple=true)
+      option(value='profile') Profile
+      option(value='email') Email
+    label Redirect URIs
+    textarea.form-control(name='redirect_uris')
+    hr
+    button.btn.btn-primary(type='submit') Save
+    
+    
+    
+
