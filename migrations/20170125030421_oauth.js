@@ -1,6 +1,6 @@
 
 exports.up = function(knex, Promise) {
-  return Promise.all(
+  return Promise.all([
     knex.schema.createTable('clients', function(t) {
       t.uuid('id').primary();
       t.text('name');
@@ -27,14 +27,14 @@ exports.up = function(knex, Promise) {
       t.text('scope');
       t.uuid('client_id');
       t.uuid('user_id');
-    })
+    })]
   )
 };
 
 exports.down = function(knex, Promise) {
-  Promise.all(
+  Promise.all([
     knex.schema.dropTableIfExists('clients'),
     knex.schema.dropTableIfExists('tokens'),
     knex.schema.dropTableIfExists('auth_codes')
-    );
+    ]);
 };
